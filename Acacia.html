@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>No Nut November</title>
+</head>
+<body>
+	<main>
+		<h1>
+			No Nut November
+		</h1>
+		<h2>
+			Stay Strong!!
+		</h2>
+		<p id="demo">
+			
+		</p>
+	</main>
+</body>
+</html>
+<script type="text/javascript">
+	var deadline = new Date("Dec 01, 2022 00:00:01").getTime(); 
+var x = setInterval(function() { 
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("demo").innerHTML ="COUNTDOWN: </br>"+ days + "Days "  
++ hours + "Hours " + minutes + "Minutes " + seconds + "Seconds "; 
+    if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("demo").innerHTML = "It is Time!! \n To Nut!!" ; 
+    } 
+}, 1000);
+
+</script>
+<style type="text/css">
+	*{box-sizing: border-box;}
+	body{
+		background: linear-gradient(45deg, #1118, #fff8, #3338), url('nnn.jpg');
+		padding: 0px;
+		margin: 0px;
+		background-repeat: repeat;
+		
+	}
+	main{
+		margin:20% 5% 5%;
+		width: 90%;
+		height:90%;
+		background-color: #3339;
+		padding: 10%;
+		border-radius: 50px;
+		text-align: center;
+		color: green;
+		animation-name: colo;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: backwards;
+		transition: 2s ease;
+	}
+	@keyframes colo{
+		0%{color:floralwhite;}
+		10%{color:powderblue;}
+		20%{color:lime;}
+		30%{color:whitesmoke;}
+		40%{color:antiquewhite;}
+		50%{color:aqua;}
+		60%{color:yellow;}
+		70%{color:ghostwhite;}
+		80%{color:navajowhite;}
+		90%{color:teal;}
+		100%{color:antiquewhite;}
+	}
+	h1{
+		font-family: helvetica;
+		font-size: 6rem;
+	}
+	h2{
+		font-family: helvetica;
+		font-size: 5rem;
+	}
+	p{
+		font-size: 6rem;
+		font-family: courier;
+		font-weight: bolder;
+	}
+</style>

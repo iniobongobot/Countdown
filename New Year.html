@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DGMI</title>
+</head>
+<body>
+	<main>
+		<h1>
+		Count Down to 2022
+		</h1>
+		<p id="demo">
+			
+		</p>
+	</main>
+</body>
+</html>
+<script type="text/javascript">
+	var deadline = new Date("Jan 01, 2022 00:00:01").getTime(); 
+var x = setInterval(function() { 
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("demo").innerHTML =  days + "Days <br>"  
++ hours + "Hours <br>" +minutes + " Mins <br>" + seconds + " Secs <br> Until 2022"; 
+    if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("demo").innerHTML = "HAPPY NEW YEAR"; 
+    } 
+}, 1000);
+
+</script>
+<style type="text/css">
+	*{box-sizing: border-box;}
+	body{
+		background: linear-gradient(45deg, #1118, #fff8, #3338), url('https://kaunas2022.eu/wp-content/uploads/2017/07/www.jpg');
+		padding: 0px;
+		margin: 0px;
+		background-repeat: no-repeat;
+		background-position: center;
+		
+	}
+	main{
+		margin:2%;
+		width: 96%;
+		height:90%;
+		background-color: #3339;
+		padding: 1px;
+		border-radius: 50px;
+		text-align: center;
+		color: white;
+		animation-name: colo;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: backwards;
+		transition: 2s ease;
+	}
+	@keyframes colo{
+		0%{color:olive;}
+		10%{color:white;}
+		20%{color:lime;}
+		30%{color:pink;}
+		40%{color:fuchsia;}
+		50%{color:aqua;}
+		60%{color:yellow;}
+		70%{color:lime;}
+		80%{color:hotpink;}
+		90%{color:white;}
+		1000%{color:cyan;}
+	}
+	h1{
+		font-family: helvetica;
+		font-size: 5rem;
+		margin: 0;
+		padding: 0;
+	}
+	p{
+		font-size: 6rem;
+		font-family: courier;
+		font-weight: bold;
+		margin:0;
+		padding:0;
+	}
+</style>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Graduation</title>
+</head>
+<body>
+	<main>
+		
+		<p id="demo">
+			
+		</p>
+		<h1>
+			Until Graduation Day!!!
+		</h1>
+	</main>
+</body>
+</html>
+<script type="text/javascript">
+	var deadline = new Date("May 8, 2021 00:00:01").getTime(); 
+var x = setInterval(function() { 
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("demo").innerHTML = days + " Days "  
++ hours + " Hours " + minutes + " Minutes " + seconds + " Seconds "; 
+    if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("demo").innerHTML = "Happy Graduation"; 
+    } 
+}, 1000);
+
+</script>
+<style type="text/css">
+	*{box-sizing: border-box;}
+	body{
+		background: linear-gradient(45deg, #1118, #fff8, #3338), url('https://ontargetnews.com/wp-content/uploads/2020/04/Graduation-3-scaled.jpeg');
+		padding: 0px;
+		margin: 0px;
+		background-repeat: repeat;
+		background-size: 50%;
+		
+	}
+	main{
+		margin:5% 10%;
+		width: 80%;
+		height:20%;
+		background-color: #3339;
+		padding: 1%;
+		border-radius: 50px;
+		text-align: center;
+		color: white;
+		animation-name: colo;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: backwards;
+	}
+	@keyframes colo{
+		0%{color:olive;}
+		10%{color:darkorange;}
+		20%{color:lime;}
+		30%{color:navy;}
+		40%{color:red;}
+		50%{color:orange;}
+		60%{color:yellow;}
+		70%{color:green;}
+		80%{color:blue;}
+		90%{color:indigo;}
+		100%{color:violet;}
+	}
+	h1{
+		font-family: helvetica;
+		font-size: 6rem;
+	}
+	p{
+		font-size: 4rem;
+		font-family: courier;
+		font-weight: bold;
+	}
+</style>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ima's brithday</title>
+</head>
+<body>
+	<main>
+		<h1>
+			Ima Obot's Birthday
+		</h1>
+		<p id="demo">
+			
+		</p>
+	</main>
+</body>
+</html>
+<script type="text/javascript">
+	var deadline = new Date("July 02, 2022 00:00:01").getTime(); 
+var x = setInterval(function() { 
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("demo").innerHTML ="Countdown: <br>"+ days + "Days "  
++ hours + "Hours " + minutes + "Minutes " + seconds + "Seconds "; 
+    if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("demo").innerHTML = "HAPPY BIRTHDAY"; 
+    } 
+}, 1000);
+
+</script>
+<style type="text/css">
+	*{box-sizing: border-box;}
+	body{
+		background: linear-gradient(45deg, #1118, #fff8, #3338), url('https://ak.picdn.net/shutterstock/videos/1027541516/thumb/1.jpg?ip=x480');
+		padding: 0px;
+		margin: 0px;
+		background-repeat: repeat;
+		
+	}
+	main{
+		margin:2%;
+		width: 96%;
+		height:80%;
+		background-color: #3339;
+		padding: 2%;
+		border-radius: 50px;
+		text-align: center;
+		color: white;
+		animation-name: colo;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: backwards;
+		transition: 2s ease;
+	}
+	@keyframes colo{
+		0%{color:hotpink;}
+		20%{color:lime;}
+		40%{color:fuchsia;}
+		60%{color:yellow;}
+		80%{color:greenyellow;}
+		100%{color:whitesmoke;}
+	}
+	h1{
+		font-family: helvetica;
+		font-size: 9rem;
+		padding: 0%;
+		margin: 2%;
+	}
+	p{
+		font-size: 9rem;
+		font-family: courier;
+		font-weight: bold;
+		padding: 0%;
+		margin: 7%;
+	}
+</style>
